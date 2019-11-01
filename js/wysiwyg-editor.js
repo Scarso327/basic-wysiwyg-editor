@@ -3,14 +3,12 @@ $(document).ready(function() {
     $(".Editor-Input").keyup(updateOutput);
 
     // Fix deleting of the firstline <p>
-    $('.Editor-Input').keydown(function(e) {
-        if (e.keyCode === 8) {
-            if ($(".Editor-Input").html() == "" || $(".Editor-Input").html() == "<p><br></p>") {
-                $(".Editor-Input").html("<p><br></p>");
-                return false;
-            }
+    $('.Editor-Input').on("change paste keyup keydown", function(e) {
+        if ($(".Editor-Input").html() == "" || $(".Editor-Input").html() == "<p><br></p>") {
+            $(".Editor-Input").html("<p><br></p>");
+            event.preventDefault();
         }
-    });
+     });
 });
 
 function action (action) {
