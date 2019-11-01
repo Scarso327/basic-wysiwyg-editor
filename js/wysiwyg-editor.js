@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     // Fix deleting of the firstline <p>
     $('.Editor-Input').on("change paste keyup keydown", function(e) {
-        if ($(".Editor-Input").html() == "" || $(".Editor-Input").html() == "<p><br></p>") {
+        if ($(".Editor-Input").html() == "" || (e.keyCode === 8 && $(".Editor-Input").html() == "<p><br></p>")) {
             $(".Editor-Input").html("<p><br></p>");
             event.preventDefault();
         }
