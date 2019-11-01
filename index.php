@@ -47,9 +47,7 @@
                         <span class="fas fa-align-justify"></span>
                     </a>
                 </div>
-                <div class="Editor-Input" contenteditable="true" spellcheck="true" role="textbox" aria-multiline="true">
-                    <p><br></p>
-                </div>
+                <div class="Editor-Input" contenteditable="true" spellcheck="true" role="textbox" aria-multiline="true"><p><br></p></div>
             </div>
             <h4>Output:</h4>
             <p id="output"></p>
